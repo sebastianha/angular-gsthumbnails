@@ -4,7 +4,7 @@
   "authors": [
     "Sebastian Hammerl, Getslash GmbH"
   ],
-  "description": "A popup thumbnail directive to use with AngularJS",
+  "description": "An image frame overlay with (popup) thumbnails on mouseover for AngularJS",
   "main": [
     "angular-gsthumbnails.js"
   ],
