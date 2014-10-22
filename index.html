@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="angular-gsthumbnails.js"></script>
+	<script src="app.js"></script>
+
+	<!-- Only needed when not using bootstrap -->
+	<style>
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body ng-app="angular-gsthumbnails-test" ng-controller="index">
+
+	<gsthumbnails
+		style="margin-left:80px;margin-top:60px;"
+		src="img"
+		frame-src="frame.png"
+		height="50px"
+		width="60px"
+		size="100%"
+		position="50% 50%"
+		repeat="no-repeat"
+
+		hover-height="100px"
+		hover-width="120px"
+		hover-top="-32px"
+		hover-left="-50px"
+
+		id="0"
+		get-function="get"
+		config="config"
+	></gsthumbnails>
+
+</body>
+</html>

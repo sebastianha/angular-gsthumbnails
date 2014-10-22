@@ -1,0 +1,32 @@
+{
+  "name": "angular-gsthumbnails",
+  "version": "0.1.0",
+  "authors": [
+    "Sebastian Hammerl, Getslash GmbH"
+  ],
+  "description": "A popup thumbnail directive to use with AngularJS",
+  "main": [
+    "angular-gsthumbnails.js"
+  ],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "image",
+    "frame",
+    "thumbnail",
+    "thumbnails",
+    "popup"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": ">= 1.2.0"
+  },
+  "devDependencies": {
+    "angular-scenario": ">= 1.2.0"
+  }
+}

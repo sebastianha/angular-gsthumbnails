@@ -1,0 +1,36 @@
+"use strict";
+
+angular.module("angular-gsthumbnails-test", ["ui.gsthumbnails"]).controller("index", function($scope, $timeout) {
+	$scope.img = "img0.png";
+
+	$scope.get = function(id, callback) {
+		console.log("requestDummy START");
+
+		var data = [
+			{
+				id    : 0,
+				images: [
+					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABkCAIAAADCEmNlAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goVCDI5dfHlMgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAoElEQVR42u3QQQkAAAgAMbV/Z00hKOwC3GPZsVNvjZ9WCECDFmjQoAUatECDBi3QoAUaNGiBBi3QoEELNGiBBg1aoEELNGjQAg1aoEGDFmjQAg0atECDFmjQoAUatECDBi3QoAUaNGiBBi3QoEELNGiBBg1aoEELNGjQAg1aoEGDFmjQAg0atECDFmjQoAUatECDBi3QoAUaNGiBBi3QNxpwIAPFImXjggAAAABJRU5ErkJggg==",
+					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABkCAIAAADCEmNlAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goVCDM2/FXJ4gAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAn0lEQVR42u3QwQ0AAAQAMey/Mz8zkPQmuDQ7XtXPfrcKgQYt0KBBCzRogQYNWqBBCzRo0AINWqBBgxZo0AINGrRAgxZo0KAFGrRAgwYt0KAFGjRogQYt0KBBCzRogQYNWqBBCzRo0AINWqBBgxZo0AINGrRAgxZo0KAFGrRAgwYt0KAFGjRogQYt0KBBCzRogQYNWqBBCzRo0AINWqBPNMK/A8W+8UPrAAAAAElFTkSuQmCC",
+					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABkCAIAAADCEmNlAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goVCDQQYRna2AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAm0lEQVR42u3QMQEAMAgDsDL/nkEC17gSCakOSX9veJJviBYtGtGiRSsQLRrRokUjWjSiRYtGtGhEixaNaNGIFi0a0aIRLVo0okUjWrRoRItGtGjRiBaNaNGiES0a0aJFI1o0okWLRrRoRIsWjWjRiBYtGtGiES1aNKJFI1q0aESLRrRo0YgWjWjRohEtGtGiRSNaNKJFi0a0aDYDFW0DxRE0+u0AAAAASUVORK5CYII=",
+					"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABkCAIAAADCEmNlAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goVCDQwWnf6EAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAlklEQVR42u3QMREAAAgEILV/57eF5wAR6BQXRoFo0YgWLRrRohEtWjSiRSNatGhEi0a0aNGIFo1o0aIRLRrRokUjWjSiRYtGtGhEixaNaNGIFi0a0aIRLVo0okUjWrRoRItGtGjRiBaNaNGiES0a0aJFI1o0okWLRrRoRIsWjWjRiBYtGtGiES1aNKJFI1q0aESLRvQPCyQNAcfpiu/vAAAAAElFTkSuQmCC"
+				]
+			}
+		];
+
+		$timeout(function() {
+			console.log("requestDummy RETURN");
+			if(data[id] !== undefined) {
+				callback(data[id]);
+			} else {
+				callback({id: id, images: []});
+			}
+		}, 100);
+	};
+
+	$scope.config = {
+		popup  : true,
+		timeout: 500,
+		max    : 5
+	};
+});
