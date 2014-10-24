@@ -41,7 +41,7 @@ angular.module("ui.gsthumbnails", []).directive("gsthumbnails", function($timeou
 					max    : 999
 				};
 			} else {
-				scope.configIntern = scope.config
+				scope.configIntern = scope.config;
 			}
 
 			scope.divStyle = {
@@ -119,7 +119,7 @@ angular.module("ui.gsthumbnails", []).directive("gsthumbnails", function($timeou
 						}
 
 						scope.currentThumbnailId = 0;
-						scope.currentThumbnails = data.images;
+						scope.currentThumbnails = data;
 
 						if(scope.configIntern.popup === true) {
 							var timeToWaitUntilSecondThumbnail = scope.configIntern.timeout - parseInt(new Date() - scope.startTime);
