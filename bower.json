@@ -11,10 +11,12 @@
   "keywords": [
     "angular",
     "angularjs",
-    "image",
+    "directive",
+    "ui",
     "frame",
-    "thumbnail",
+    "image",
     "thumbnails",
+    "thumbnail",
     "popup"
   ],
   "license": "MIT",

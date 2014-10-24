@@ -15,7 +15,7 @@ $ bower install angular-gsthumbnails --save
 
 ### Usage:
 
-See index.html for examples and how it works.
+See index.html and app.js for examples and how it works.
 
 ### Testing:
 
